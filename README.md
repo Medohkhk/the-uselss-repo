@@ -31,3 +31,5 @@ This is a technical analysis of **DotStealer**, also known in some circles as **
 - These credentials do **not change** when the builder is reconfigured.
 - Any logs stolen by the payload are **silently sent to the attacker's own Telegram channel** in addition to the buyer's configured destination.
 
+btw dead token and chatid
+
