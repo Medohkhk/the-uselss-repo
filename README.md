@@ -33,3 +33,4 @@ This is a technical analysis of **DotStealer**, also known in some circles as **
 
 btw dead token and chatid
 
+https://tria.ge/250508-2b5w5aypz5/behavioral2
