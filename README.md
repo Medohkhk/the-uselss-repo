@@ -117,7 +117,6 @@ Type	Value
 C2 Domain	abolhb[.]com
 Embedded Tools	xWorm, njRAT
 Behavior	Keylogging, file theft, wiper
-Mutex Example	neptune_mutex_01 (sample)
 Hashes	(MD5
 
 39fd5e31eb34e8b98a89c78fd76354cf
