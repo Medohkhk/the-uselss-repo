@@ -118,7 +118,17 @@ C2 Domain	abolhb[.]com
 Embedded Tools	xWorm, njRAT
 Behavior	Keylogging, file theft, wiper
 Mutex Example	neptune_mutex_01 (sample)
-Hashes	(To be filled by user)
+Hashes	(MD5
+
+39fd5e31eb34e8b98a89c78fd76354cf
+
+SHA1
+
+eac5246b5bef6f8a7d0dab40bf7b1a2a858e6acf
+
+SHA256
+
+912c932d1793e540542a27eff9968e298dc2fbbc8a3ece3765471c6d217f1ff4)
 
 🧑‍💻 Attribution & Risk
 While attribution is unclear, the use of dual RATs and an embedded backdoor strongly suggests:
