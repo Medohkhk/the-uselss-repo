@@ -141,3 +141,79 @@ Risk Rating: 🔴 Severe – due to rootkit-level access, destructive payloads, 
 sometimes a bootkit idk why
 
 triage link: https://tria.ge/250404-qwpj4axya1
+
+
+3RD malware
+
+Yashma Ransomware is a rebranded evolution of Chaos ransomware, which itself was a fake version of Ryuk that grew into a real, dangerous tool.
+
+Despite looking like a “script kiddie” project, Yashma encrypts, destroys, and terrorizes its victims with minimal effort and maximum damage.
+
+⚙️ Technical Summary
+Origin: Based on Chaos v6+ builder
+
+Encryption: AES or custom XOR-based for larger files
+
+Destruction: Files under 2MB are deleted instead of encrypted
+
+Offline mode: Can run without contacting a server
+
+Ransom Note: Customizable; often includes email and BTC address
+
+🧾 Example Ransom Note
+text
+Copy
+Edit
+Your files have been encrypted by Yashma.
+Do not try to decrypt them yourself. You will lose them forever.
+Contact: yashma@tutanota.com
+BTC: [wallet address]
+🛠 IOC Sample (Confirmed)
+text
+Copy
+Edit
+MD5     : d28e9e9709c17992070e458156b5fb97
+SHA1    : 94537d7c84ede37b5e038ebf787154e0c6128e0e
+SHA256  : 5f96f137bb48f6cc053fce3d33a7d2e699c8d5a27b2b222438039d3eaee404e7
+SHA512  : 17b580ab38056b58815f72052eb0842c06421b7facac6709624bfc72ab697800...
+SSDEEP  : 3072:m8qeoi2YcRVm16Pn6t0H7GMgXuD//bFLAkCHHhtEyR/x5Zt1Triw/rFLjZkJ...
+🎯 File Extensions
+.yashma
+
+.locked
+
+.crypted
+
+🧨 Common Features
+Feature	Present
+GUI Builder	✅
+Real Encryption	✅ (Chaos v6+)
+File Deletion	✅
+Anti-VM	❌
+C2 Usage	Optional
+Builder Sold Online	✅
+
+⚖️ Chapter 3: Contrast & Context
+Feature	NeptuneRAT	Yashma Ransomware  dotstealer
+Origin	Underground RAT scene	Chaos ransomware builder
+Used by	Black hats, botnet ops	Script kiddies, extortionists
+Stealth	Rootkit-enabled	No stealth
+Destruction Mechanism	Manual via panel	Automated on execution
+Spread method	Custom loader/stub	Malicious installers, fake tools
+Risk Level	🔴 Severe	🔴 Severe
+
+📎 Final Words: A New Era of DIY Cybercrime
+NeptuneRAT and Yashma are part of a new wave of builder-based malware, allowing even novice attackers to unleash complex threats. Despite their amateur origins, these tools are capable of:
+
+Disabling machines
+
+Hijacking cameras
+
+Encrypting critical data
+
+Evading detection via obfuscation and rootkits
+
+As such tools become easier to build, more polished, and more destructive, the line between “script kiddie” and “serious threat actor” begins to blur.
+
+
+https://tria.ge/250520-tdyxlafr7v
