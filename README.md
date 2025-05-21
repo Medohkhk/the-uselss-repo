@@ -34,3 +34,101 @@ This is a technical analysis of **DotStealer**, also known in some circles as **
 btw dead token and chatid
 
 https://tria.ge/250508-2b5w5aypz5/behavioral2
+
+
+2nd malware
+
+🎬 Introduction
+In early 2025, a previously underground malware family known as NeptuneRAT resurfaced, drawing the attention of independent researchers and threat analysts. Initially marketed as a modern Remote Access Trojan (RAT) for "educational purposes," NeptuneRAT quickly gained notoriety for being backdoored, feature-rich, and actively destructive.
+
+This documentary-style brief exposes the inner workings of NeptuneRAT — from its rootkit loader and embedded dual-RAT payloads, to its hidden “fun panel” capable of wiping machines with a single click.
+
+🧬 Malware Architecture
+📁 Stub (Initial Loader)
+The infection begins with a stub, often disguised as a cracked tool or installer. Upon execution, it loads a concealed rootkit with elevated privileges.
+
+🦠 Rootkit
+The rootkit is not a simple packer. It serves as the primary payload container, embedding two notorious RATs:
+
+xWorm: A modular, modern Trojan with capabilities like DDoS, clipboard hijacking, persistence, and more.
+
+njRAT: A legacy but powerful surveillance tool with webcam, microphone, and remote shell access.
+
+The rootkit provides stealth, persistence, and execution control of both embedded malware strains.
+
+🌐 C2 Infrastructure
+🕸 Primary Domain
+abolhb[.]com — the known command-and-control (C2) server
+
+Likely registered via bulletproof hosting
+
+Suspected to serve malware updates, commands, and plugin payloads
+
+📡 Network Behavior
+HTTP(S) and TCP-based command channels
+
+Periodic beaconing
+
+DNS tunneling likely involved
+
+🎮 Command Panel – “Fun Panel”
+What sets NeptuneRAT apart is its administrative control panel, which includes a section referred to in code and by users as the “fun panel.”
+
+🚨 Destructive Capabilities Include:
+System file wipers
+
+Registry corruption
+
+Forced BSOD
+
+Fake Windows Updates (crash loopers)
+
+Payload delivery that bricks machines
+
+This is not just spyware — it's a fully weaponized RAT with kill-switch level controls.
+
+📜 Version History
+🔹 Version 1
+deleted off github
+
+Used by script kiddies and low-level actors
+
+Lacked stealth and had simple persistence
+
+🔹 Version 2
+Embedded xWorm and njRAT
+deleted off github 
+
+Integrated destructive panel
+
+Deleted from circulation after reports of backdooring — the creator had inserted their own C2 & spyware to spy on users of the tool
+
+🕵️‍♂️ Research Notes
+The stub loads the rootkit in memory, avoiding traditional AV
+
+Anti-debugging and sandbox evasion are implemented
+
+The rootkit appears to hook system calls for file hiding and process cloaking
+
+File hashes, mutex names, and C2 behaviors align with known xWorm/njRAT samples
+
+🔐 Indicators of Compromise (IOCs)
+Type	Value
+C2 Domain	abolhb[.]com
+Embedded Tools	xWorm, njRAT
+Behavior	Keylogging, file theft, wiper
+Mutex Example	neptune_mutex_01 (sample)
+Hashes	(To be filled by user)
+
+🧑‍💻 Attribution & Risk
+While attribution is unclear, the use of dual RATs and an embedded backdoor strongly suggests:
+
+A single operator or small group distributing this for both control and espionage
+
+A false flag of "educational" usage masking real-world cybercrime
+
+Risk Rating: 🔴 Severe – due to rootkit-level access, destructive payloads, and open-source distribution among threat actors.
+
+sometimes a bootkit idk why
+
+triage link: https://tria.ge/250404-qwpj4axya1
